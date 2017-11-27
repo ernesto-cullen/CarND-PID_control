@@ -1,1 +1,3 @@
-/usr/bin/c++  -Wall -g   CMakeFiles/pid.dir/src/PID.cpp.o CMakeFiles/pid.dir/src/main.cpp.o  -o pid  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lz -lssl -luv -luWS 
+C:\Users\mac\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\173.3727.18\bin\cmake\bin\cmake.exe -E remove -f CMakeFiles\pid.dir/objects.a
+C:\mingw\bin\ar.exe cr CMakeFiles\pid.dir/objects.a @CMakeFiles\pid.dir\objects1.rsp
+C:\mingw\bin\g++.exe -Wall -g   -Wl,--whole-archive CMakeFiles\pid.dir/objects.a -Wl,--no-whole-archive  -o pid.exe -Wl,--out-implib,libpid.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\pid.dir\linklibs.rsp

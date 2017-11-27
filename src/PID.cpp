@@ -28,15 +28,9 @@ void PID::UpdateError(double cte) {
   prev_cte = cte;
 }
 
-double PID::TotalError() {
-  return p_error + d_error + i_error;
-}
-
 double PID::getSteerValue(double cte) {
   UpdateError(cte);
   double steer = -(Kp * p_error + Kd * d_error + Ki * i_error);
-//  std::cout << "cte: " << cte << ", steer: " << steer << ", cte-prev: "
-//            << cte-prev_cte << std::endl;
   prev_cte = cte;
   sum_cte += cte;
   if (steer < -1.0) steer = -1.0;

@@ -3,96 +3,86 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
-## Dependencies
+4th project of term 2 of Udacity's Self-Driving Car nanodegree
 
-* cmake >= 3.5
- * All OSes: [click here for installation instructions](https://cmake.org/install/)
-* make >= 4.1(mac, linux), 3.81(Windows)
-  * Linux: make is installed by default on most Linux distros
-  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
-* gcc/g++ >= 5.4
-  * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
-* [uWebSockets](https://github.com/uWebSockets/uWebSockets)
-  * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
-  * If you install from source, checkout to commit `e94b6e1`, i.e.
-    ```
-    git clone https://github.com/uWebSockets/uWebSockets 
-    cd uWebSockets
-    git checkout e94b6e1
-    ```
-    Some function signatures have changed in v0.14.x. See [this PR](https://github.com/udacity/CarND-MPC-Project/pull/3) for more details.
-* Simulator. You can download these from the [project intro page](https://github.com/udacity/self-driving-car-sim/releases) in the classroom.
+This project builds on the original repository [here](https://github.com/udacity/CarND-Controls-PID). You can find dependencies and build instructions there.
 
-There's an experimental patch for windows in this [PR](https://github.com/udacity/CarND-PID-Control-Project/pull/3)
 
-## Basic Build Instructions
+The project asks for the implementation of a PID (Proportional-Integral-Derivative) controller for the car in [Term 2 Simulator](https://github.com/udacity/self-driving-car-sim/releases). The car has to complete a lap on the circuit without going out of the lane.
 
-1. Clone this repo.
-2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
 
-Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
+## PID Controller
 
-## Editor Settings
+>Graphics for this section were taken from _Feedback Systems: An Introduction for Scientists and Engineers_ by Karl Johan Astrom and Richard M. Murray
 
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
+The simulator sends the actual telemetry values for Speed, Steer Angle and CTE (Cross-Track Error) to the controller. The controller uses the PID control law to compute a steer angle that reduces the error. This steer angle is sent to the simulator which applies it and the loop repeats.
 
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
+The PID controller has the following expression:
 
-## Code Style
+![PID equation](images/pid_equation.png)
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
+where
 
-## Project Instructions and Rubric
+_kp_ is the proportional constant
 
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
+_ki_ is the integral constant
 
-More information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
-for instructions and the project rubric.
+_kd_ is the derivative constant
 
-## Hints!
+Those are the three parameters we have to modify the behaviour of the controller. Each one has an effect on the output, which is then subtracted from the input (negative feedback) to get the error, which is sent again to the controller. In blocks:
 
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
+![PID block diagram](images/pid_graph.png)
 
-## Call for IDE Profiles Pull Requests
+The input _r_ is the reference value. The controller tries to get the output _y_ to follow it by substracting the calculated output from the reference input to get the error. In other words, if the car is out of the center of the lane (error) the controller will generate a steer angle that will bring the car to the center again.
 
-Help your fellow students!
+The proportional part of the controller brings a value proportional to the error: if the error is big, the proportional response will be big. This generates a response in the correct direction, but the car will certainly _overshoot_ the center because the control signal will continue driving the steering on the direction contrary to the error until the car goes to the other side of the center and the error changes sign; then the control signal will change sign too and the process repeats in the other direction. The bigger the proportional constant, the bigger the oscillation.
 
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to we ensure
-that students don't feel pressured to use one IDE or another.
+The derivative part of the controller aports a signal proportional to the _rate of change_ of the error; if the error is changing rapidly, the derivative portion will be bigger than if the error is changing slowly. This helps to _damp_ the response of the proportional term so the overshoot can be reduced and the reference value approached over time. There will usually be an offset due to the model parameters drift.
 
-However! I'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
+The integral part allows the controller to eliminate the offset or _steady-state_ error: the reference value can be reached exactly over time. The bigger the integral constant, the faster the reference value will be reached; but it can also cause oscillations.
 
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
+![P control](images/p_control.png)
 
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
+![PI control](images/pi_control.png)
 
-Frankly, I've never been involved in a project with multiple IDE profiles
-before. I believe the best way to handle this would be to keep them out of the
-repo root to avoid clutter. My expectation is that most profiles will include
-instructions to copy files to a new location to get picked up by the IDE, but
-that's just a guess.
+![PID_control](images/pid_control.png)
 
-One last note here: regardless of the IDE used, every submitted project must
-still be compilable with cmake and make./
+The controller implemented is a complete PID. The code is in class PID:
 
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+```C++
+void PID::UpdateError(double cte) {
+  p_error = cte;
+  d_error = (cte-prev_cte);
+  i_error += cte;
+  prev_cte = cte;
+}
 
+double PID::getSteerValue(double cte) {
+  UpdateError(cte);
+  double steer = -(Kp * p_error + Kd * d_error + Ki * i_error);
+  prev_cte = cte;
+  sum_cte += cte;
+  if (steer < -1.0) steer = -1.0;
+  if (steer > 1.0) steer = 1.0;
+  return steer;
+}
+```
+
+Here we consider unitary time steps.
+
+## Parameter tuning
+
+Get the best parameters for the problem at hand can be a difficult task. All three parts of the controller act together to get the reference following we look for. If the model is known and the input is stable enough, we could develop a theoretical model and do a frequency or time analysis to get the best parameter values. But in this case, we have a dynamic system that changes on each step (there are curves in the road and the car speed changes in response to the steering) so it is difficult to find a good suite of parameters. Also, the values found to behave correctly for a given velocity may not work for a faster car due to delays in the measurements and setting of the control action.
+
+I set the parameter values through a series of trials, conducted in some way by the effect I wanted to obtain.
+
+I tried first a fully proportional controller (_Kd_ = _Ki_ = 0) and observe the car going from side to side, the bigger the speed the bigger the oscillation.
+
+Then added the integral action setting _Ki_ to a value greater than 0. The car behaviour got much better, though it still performed some 'jerking' at the curves.
+
+Finally, adding the derivative action with _Kd_ > 0 allowed the car to perform _almost_ stable in the rect parts of the circuit and dampen a little the oscillations on the curves.
+
+The effect is not perfect though; a certain amount of oscillation is still in effect specially at higher speeds. A better control law will be needed to reduce or eliminate this.
+
+## Conclusion
+This project is a good introduction to the practicalities of the PID controller. The controller is very easy to implement and get a good enough result at slow speeds. At higher speeds though the control is not good enough and the car can end out of the road if the oscillation is big.

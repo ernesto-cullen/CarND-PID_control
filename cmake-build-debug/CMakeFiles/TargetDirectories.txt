@@ -1,3 +1,3 @@
-/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/CMakeFiles/pid.dir
+D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/CMakeFiles/pid.dir
+D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -47,10 +47,6 @@ public:
   */
   void UpdateError(double cte);
 
-  /*
-  * Calculate the total PID error.
-  */
-  double TotalError();
 
   double getSteerValue(double cte);
 

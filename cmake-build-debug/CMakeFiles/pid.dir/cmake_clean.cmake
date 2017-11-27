@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pid.dir/src/PID.cpp.o"
-  "CMakeFiles/pid.dir/src/main.cpp.o"
+  "CMakeFiles/pid.dir/src/PID.cpp.obj"
+  "CMakeFiles/pid.dir/src/main.cpp.obj"
   "pid.pdb"
-  "pid"
+  "pid.exe"
+  "pid.exe.manifest"
+  "libpid.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

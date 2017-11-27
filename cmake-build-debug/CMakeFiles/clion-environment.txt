@@ -1,2 +1,4 @@
+ToolSet: 5.0@C:\mingw
 Options: 
-CMake: 3.8.2@/media/mac/datamac/linux/apps/CLion/ch-0/172.4343.16/bin/cmake/bin/cmake
+
+Options:

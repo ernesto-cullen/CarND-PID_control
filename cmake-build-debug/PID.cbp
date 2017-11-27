@@ -8,92 +8,92 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
+				<Option working_dir="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pid">
-				<Option output="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/pid" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
+				<Option output="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/pid.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 pid"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 pid"/>
+					<CompileFile command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pid/fast">
-				<Option output="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/pid" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
+				<Option output="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/pid.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 pid/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/mac/datamac/archi/ernesto/cursos/self-driving\ car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 pid/fast"/>
+					<CompileFile command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/bin/mingw32-make.exe -f &quot;D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/src/PID.cpp">
+		<Unit filename="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/src/PID.cpp">
 			<Option target="pid"/>
 		</Unit>
-		<Unit filename="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/src/PID.h">
+		<Unit filename="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/src/PID.h">
 			<Option target="pid"/>
 		</Unit>
-		<Unit filename="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/src/main.cpp">
+		<Unit filename="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/src/main.cpp">
 			<Option target="pid"/>
 		</Unit>
-		<Unit filename="/media/mac/datamac/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/CMakeLists.txt">
+		<Unit filename="D:/archi/ernesto/cursos/self-driving car/term2/pid/CarND-PID-Control-Project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
