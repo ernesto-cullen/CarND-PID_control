@@ -12,10 +12,10 @@ constexpr double pi() { return M_PI; }
 double deg2rad(double x) { return x * pi() / 180; }
 double rad2deg(double x) { return x * 180 / pi(); }
                     //15mph  20mph  30mph
-double Kpi = 0.15;  //0.25    0.25   0.2
-double Kdi = 0.008; //0.01    0.02   0.01
-double Kii = 2.0;   //3.0     4.0    3.0
-const double MAX_SPEED = 40;
+double Kpi = 0.2;  //0.25    0.25   0.2
+double Kdi = 0.01; //0.01    0.02   0.01
+double Kii = 3.0;   //3.0     4.0    3.0
+const double MAX_SPEED = 30;
 
 // Checks if the SocketIO event has JSON data.
 // If there is data the JSON object in string format will be returned,
